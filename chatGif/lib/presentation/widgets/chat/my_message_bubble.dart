@@ -6,6 +6,7 @@ class MyMessageBubble extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    //Aqui le hare modificaciones similares al her message pero aun no llego a esta parte
     // buscar el tema del contexto
     final colors = Theme.of(context).colorScheme;
     return Column(
@@ -16,9 +17,10 @@ class MyMessageBubble extends StatelessWidget {
           // width: 10,
           decoration: BoxDecoration(
               color: colors.primary, borderRadius: BorderRadius.circular(20)),
-          child:  Padding(
+          child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-            child: Text(message,
+            child: Text(
+              message,
               style: const TextStyle(color: Colors.white),
             ),
           ),

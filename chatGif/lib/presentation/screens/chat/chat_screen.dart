@@ -8,7 +8,11 @@ import 'package:yes_no_ejemplo/presentation/widgets/herBar/her_presentation.dart
 
 class ChatScreen extends StatelessWidget {
   const ChatScreen({super.key});
-
+/*Aqui esta lo bueno, pues, aqui creo que me complique yo solo ocuparia preguntarle al profe xd, pq para darle la imagen de fondo y cargar el body, pues ocupo el Scaffold,
+ Pero para darle la imagen de fondo solo tenia el ejemplo del AppBar, asi que  lo cubri con un MaterialApp  y a la propiedad de home le puse un Conatiner para definer la imagen de fondo
+ y con el fit: ya recubres toda la panatalla que ocupas, en el child le di el Scaffold donde esta el titulo que le quiere dar al AppBar asi como el url del avatar que le quieras poner
+  y en el body ya le das el chat View
+  De este modo ya le pude dar la imagen de fondo, pero jajaj, el MessageTextField Perdio su color, ocupo ver que onda ahi*/
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -20,7 +24,7 @@ class ChatScreen extends StatelessWidget {
                   'https://img.freepik.com/premium-vector/seamless-christmas-nature-pattern-winter-forest-dark-blue-red-colours-trees-snow-night-black-background-fabric-material-packaging-wallpaper-design-textiles-vector-illustration_510988-420.jpg'),
               fit: BoxFit.cover),
         ),
-        child: const Scaffold(
+        child: Scaffold(
             backgroundColor: Colors.transparent,
             appBar: HerPresentation(
               nombre: 'Ask to Jack ',
@@ -32,6 +36,8 @@ class ChatScreen extends StatelessWidget {
     );
   }
 }
+
+//Aqui lo deje igual, las propiedades de decoracion no se definen aqui
 
 class ChatView extends StatelessWidget {
   const ChatView({super.key});

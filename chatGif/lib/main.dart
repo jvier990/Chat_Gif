@@ -10,7 +10,7 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
-
+// Al main no le tuve que mover nada, ya sabes que ha este no hay nesecidad xd, solo es llamar al ScreenPrincipal, y darle el theme y  demas cositas  pero en esencia es lo mismo
   @override
   Widget build(BuildContext context) {
     return MultiProvider(

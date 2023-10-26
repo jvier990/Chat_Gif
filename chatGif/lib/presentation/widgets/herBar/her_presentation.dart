@@ -5,13 +5,18 @@ class HerPresentation extends StatelessWidget implements PreferredSizeWidget {
   final String urlAvatar;
 
   const HerPresentation({
+    //Aqui no es necesario cambiar nada pq al final de cuentas tu le vas a pasar esos parametros cuando llames a la clase en el chatScreen, asi que solo esto sera definicion el build xd
     super.key,
     this.nombre = 'Santaaaa',
     this.urlAvatar = 'https://i.gifer.com/ZgUz.gif',
   });
-
+/*Aqui esta la configuracion del AppBar, aqui tambien me lleve un ratito para modificarlo 
+/para que quedara a mi idea que traia yo, me siento como el mecanico que nomas le pone un parche a la fuga del carro jajajaja, asi se siente el codigo*/
+/* Si te das cuenta yo me mame un poquito aqui pq el codigo del profe estaba bien cortito limpio y estructurado yo me ondie e hice un spaguetti PERO QUE A LA IDEA QUE TRAIA YO
+(mas o menos xd)*/
   @override
   Widget build(BuildContext context) {
+    //del leading hasta center title esta casi igual solo le agregue mas cosas al Text con TextStyle, para que convinara con lo demas
     return AppBar(
       leading: Padding(
         padding: const EdgeInsets.all(3.0),
@@ -26,12 +31,24 @@ class HerPresentation extends StatelessWidget implements PreferredSizeWidget {
               fontWeight: FontWeight.bold),
           nombre),
       centerTitle: false,
+      /*Aqui esta lo mio, en actions le puse una lista de Widgets, aunque solo use uno, tenia pensado en agregarle mas cosas navideñas pero aun no se como, o que mas agregarle xd
+      Asi que solo tiene un gif de un perrito bien cool
+      */
       actions: const <Widget>[
         CircleAvatar(
           backgroundImage: NetworkImage(
               "https://media0.giphy.com/media/KtrhyNGwNCSYM4pVRq/giphy.webp?cid=ecf05e470j2ui3tn556nor9jrdq52myiu1t9dbgkhvqzb6wa&ep=v1_gifs_search&rid=giphy.webp&ct=g"),
         ),
       ],
+      /*Este atributo de flexibleSpace, me permite decorar mas el AppBar, y pues aproveche para poenrle un Container y decorarlo con el espacio que este da
+       (Queria que si o si cayera nieve)
+      Con el box decoration (Asi como en el her_message_bubble), le di la imagen para un hiciera la simulacion que cayera nieve.
+      Aparte encontre esta propiedad (gradient) con la cual puedes hacer un degradado de 2 colores, y bajo esta propiedad puede hacer un begin y end, donde alinias como quieres que sea
+      el degradado, vertical, horizontal, nadamas que como todo esto esta en un container es importante que el backgorund del AppBar sea transparente, 
+      Y como modificamos tmb el radio de las 2 esquinas de abajo (borderRadius) puede que se vean unas esquinas blancas ahi todas feas blancas
+      Pero no pasa nada en el chaScreen le doy un fondo general para que todo se vea cool
+      Y creo que es todo el AppBar (y)
+      */
       flexibleSpace: Container(
         decoration: const BoxDecoration(
             borderRadius: BorderRadius.only(
