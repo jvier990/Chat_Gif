@@ -47,7 +47,7 @@ class HerPresentation extends StatelessWidget implements PreferredSizeWidget {
       el degradado, vertical, horizontal, nadamas que como todo esto esta en un container es importante que el backgorund del AppBar sea transparente, 
       Y como modificamos tmb el radio de las 2 esquinas de abajo (borderRadius) puede que se vean unas esquinas blancas ahi todas feas blancas
       Pero no pasa nada en el chaScreen le doy un fondo general para que todo se vea cool
-      Y creo que es todo el AppBar (y)
+      Y creo que es todo en el AppBar
       */
       flexibleSpace: Container(
         decoration: const BoxDecoration(

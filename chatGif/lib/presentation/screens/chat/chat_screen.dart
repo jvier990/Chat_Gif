@@ -24,7 +24,7 @@ class ChatScreen extends StatelessWidget {
                   'https://img.freepik.com/premium-vector/seamless-christmas-nature-pattern-winter-forest-dark-blue-red-colours-trees-snow-night-black-background-fabric-material-packaging-wallpaper-design-textiles-vector-illustration_510988-420.jpg'),
               fit: BoxFit.cover),
         ),
-        child: Scaffold(
+        child: const Scaffold(
             backgroundColor: Colors.transparent,
             appBar: HerPresentation(
               nombre: 'Ask to Jack ',
